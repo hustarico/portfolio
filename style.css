@@ -1,0 +1,41 @@
+:root{
+    --background:#000019;
+    --primary:#00bbbe;
+    --secondary:#ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    background-color: var(--background);
+}
+*{
+    font-family: 'JetBrains Mono';
+    color: var(--primary);
+}
+
+#navbar{
+    list-style: none;
+}
+
+#home-cursor{
+    color: var(--secondary);
+
+    animation: blink 0.5s infinite;
+
+}
+
+@keyframes blink{
+    0% , 100% {opacity: 1;}
+    50%  {opacity: 0;}
+}
+
+li:hover{
+    color:var(--secondary)
+}
