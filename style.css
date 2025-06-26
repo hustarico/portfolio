@@ -1,34 +1,38 @@
 :root{
     --background:#000019;
-    --primary:#00bbbe;
+    --primary:rgb(0, 187, 190);
     --secondary:#ffffff;
+
+    
 }
 
-* {
+*,*::before,*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-body{
-    height: 100vh;
-    background-color: var(--background);
-}
 *{
     font-family: 'JetBrains Mono';
     color: var(--primary);
 }
 
-#navbar{
-    list-style: none;
+body{
+    height: 100vh;
+    background-color: var(--background);
 }
+
+
 
 #home-cursor{
     color: var(--secondary);
 
-    animation: blink 0.5s infinite;
+    
 
+}
+
+.blinking{
+    animation: blink 0.5s infinite;
 }
 
 @keyframes blink{
@@ -36,6 +40,134 @@ body{
     50%  {opacity: 0;}
 }
 
-li:hover{
-    color:var(--secondary)
+#navbar{
+    list-style: none;
+    background-color: var(--background);
+
+    border-bottom: var(--primary) 1px solid;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.nav-item{
+    transition: 0.2s;
+    color:var(--primary);
+    text-decoration: none;
+
+    font-size: 1rem;
+    text-wrap: nowrap;
+}
+.nav-item:hover{
+    color:var(--secondary);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+.nav-brand{
+    font-size: 1.1rem;
+}
+
+@media(max-width :730px) {
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+
+/* ! hero section  */
+#hero{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom:  var(--primary) 1px solid;
+}
+
+.hero-container{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.hero-text{
+    /* color:var(--secondary) */
+    /* border: white 1px solid; */
+
+    width: 21rem;
+    max-width: 100%;
+    height: fit-content;
+}
+.hero-text > h1{
+    line-height: 4rem;
+}
+.hero-img{
+    /* border: white 1px solid; */
+
+    transition: 0.3s;
+
+    overflow: hidden;
+
+    /* height: 90%; */
+    width: 50%;
+    max-width: 600px;
+    
+
+    
+    border-radius: 30px;
+
+
+}
+.hero-img > img{
+    height: 100%; 
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 30px;
+}
+.hero-img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 187, 190, 1);
+}
+
+@media (max-width : 700px){
+    .hero-container{
+        flex-direction: column;
+    }
+    .hero-img{
+        width: 90%;
+        max-width: fit-content;
+        height: auto;
+    }
+    .hero-text{
+        width: 90%;
+    }
+    
+}
+@media (max-width : 300px){
+    .hero-img{
+        width: 100%;
+    }
+}
+
+/* todo move the glow color to root so we can use it for everything? */
+
+/* ! about me sectoin */
+
+.about-container p{
+    color: var(--secondary);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 1);
 }
