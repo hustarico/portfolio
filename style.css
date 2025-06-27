@@ -84,6 +84,21 @@ body{
 section{
     scroll-margin-top: 64px;
 }
+@media(max-width :729px) {
+    section{
+        scroll-margin-top: 99px;
+    }
+}
+@media(max-width :444px) {
+    section{
+        scroll-margin-top: 123px;
+    }
+}
+@media(max-width :252px) {
+    section{
+        scroll-margin-top: 147px;
+    }
+}
 
 /* ! hero section  */
 #hero{
