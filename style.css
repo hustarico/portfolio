@@ -236,3 +236,23 @@ section{
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(255,255,255,1);
 }
+
+
+/* ! projects section */
+#projects{
+    border-bottom: 1px solid var(--primary);
+}
+
+
+
+/* ! contact section */
+#contact{
+    border-bottom: 1px solid var(--primary);
+}
+
+.contact-link{
+    text-decoration: none;
+}
+.contact-label{
+    word-break: break-all;
+}
