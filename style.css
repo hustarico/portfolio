@@ -248,7 +248,7 @@ section{
 .project-card{
     flex-direction: row;
     text-align: left;
-    align-items: flex-start;
+    align-items: center;
 
     height: fit-content;
     
