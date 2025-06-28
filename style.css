@@ -251,6 +251,7 @@ section{
     align-items: center;
 
     height: fit-content;
+    width: 90%;
     
 }
 .project-card > .img-container{
@@ -276,6 +277,7 @@ section{
     .project-card{
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 }
 
