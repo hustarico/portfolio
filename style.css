@@ -16,7 +16,9 @@
     font-family: 'JetBrains Mono';
     color: var(--primary);
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--background);
 }
@@ -200,7 +202,7 @@ section{
     border-bottom: 1px solid var(--primary);
 }
 
-.skill-card {
+.app-card {
     
     width: 140px;
     height: 140px;
@@ -218,12 +220,12 @@ section{
     transition: 0.3s;
 }
 
-.skill-card > svg{
+.app-card > svg{
     height: 50px;
     width: 50px;
     color: var(--secondary);
 }
-.skill-card >p{
+.app-card >p{
     margin: 0px;
 }
 
@@ -232,7 +234,7 @@ section{
     text-shadow: 0 0 25px rgba(255,255,255,1);
 }
 
-.skill-card:hover{
+.app-card:hover{
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(255,255,255,1);
 }
@@ -243,6 +245,39 @@ section{
     border-bottom: 1px solid var(--primary);
 }
 
+.project-card{
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+
+    height: fit-content;
+    
+}
+.project-card > .img-container{
+    width: 120px;     /* or whatever looks good */
+    height: 120px;
+    flex-shrink: 0; 
+}
+.project-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.project-desc > a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: var(--secondary);
+}
+.project-desc > a:hover{
+    text-shadow: 0 0 15px rgba(255,255,255,1);
+}
+
+@media (max-width:550px) {
+    .project-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 /* ! contact section */
@@ -252,7 +287,7 @@ section{
 
 .contact-link{
     text-decoration: none;
-}
-.contact-label{
-    word-break: break-all;
+    display: block;
+    padding: 0px;
+    margin: 0px;
 }
